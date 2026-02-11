@@ -5,6 +5,7 @@ import { Todo } from '../types/Todo'
 interface TodoItemProps {
     todo: Todo
     done: (id: string) => void
+    remove: (id: string) => void
 }
 
 export default function TodoItem({todo, done}: TodoItemProps) {
@@ -20,8 +21,12 @@ export default function TodoItem({todo, done}: TodoItemProps) {
 const styles = StyleSheet.create({
 done: {
     textDecorationLine: 'line-through',
+    backgroundColor: 'white',
+    fontSize: 24,
 },
 undone: {
     textDecorationLine: 'none',
+    backgroundColor: 'white',
+    fontSize: 24,
 },
 });
